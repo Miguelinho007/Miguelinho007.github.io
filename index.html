@@ -35,7 +35,7 @@
     line-height: 1.65;
     -webkit-text-size-adjust: 100%;
   }
-  .page { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+  .page { max-width: 54rem; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
 
   a { color: var(--link); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
   a:hover { text-decoration-thickness: 2px; }
@@ -50,13 +50,13 @@
   .role { margin: 0.35rem 0 0; color: var(--muted); }
 
   /* Intro */
-  .intro { display: grid; grid-template-columns: 1fr 11rem; gap: 2rem; margin-top: 2.25rem; align-items: start; }
+  .intro { display: grid; grid-template-columns: 1fr 15rem; gap: 2.5rem; margin-top: 2.25rem; align-items: start; }
   .intro p { margin: 0 0 1rem; }
   .intro p:last-child { margin-bottom: 0; }
   .intro img { width: 100%; height: auto; display: block; border-radius: 3px; }
   @media (max-width: 36rem) {
     .intro { grid-template-columns: 1fr; }
-    .intro img { max-width: 10rem; order: -1; }
+    .intro img { max-width: 12rem; order: -1; }
     .masthead h1 { font-size: 1.8rem; }
   }
 
@@ -66,14 +66,15 @@
   h3 { margin: 2rem 0 0.9rem; font-size: 1rem; font-weight: 400; font-style: italic; color: var(--muted); }
   h2 + h3 { margin-top: 0; }
 
-  .paper { margin: 0 0 1.5rem; }
+  .paper { margin: 0 0 1.75rem; max-width: 48rem; }
   .paper-title { margin: 0; font-weight: 600; line-height: 1.4; }
   .paper-meta { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.97rem; }
   .paper details { margin-top: 0.35rem; font-size: 0.97rem; }
   .paper summary { cursor: pointer; color: var(--link); width: fit-content; }
   .paper details p { margin: 0.5rem 0 0; padding-left: 1rem; border-left: 2px solid var(--rule); }
 
-  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pubs { list-style: none; margin: 0; padding: 0; max-width: 48rem; }
+  .paper-pres { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.93rem; line-height: 1.55; }
   .pubs li { margin: 0 0 0.9rem; }
   .pubs .paper-meta { display: block; }
 
@@ -108,23 +109,11 @@
         <p>I am currently visiting the Macroeconomic Analysis and Projections Division of the Deutsche Bundesbank. Before the PhD I spent two years in the Prices and Costs Division of the European Central Bank, where I helped build the ECB wage tracker and contributed to the Eurosystem's Price-setting Microdata Analysis Network (PRISMA). In fall 2025 I was a visiting PhD student at New York University, hosted by Christopher Flinn.</p>
       </div>
       <!-- Save your portrait as photo.jpg next to this file (roughly 600 x 750 px is plenty). -->
-      <img src="photo.jpg" alt="Portrait of David Wittekopf" width="352" height="440" onerror="this.style.display='none'">
+      <img src="photo.jpg" alt="Portrait of David Wittekopf" width="480" height="640" onerror="this.style.display='none'">
     </div>
 
     <section id="research">
       <h2>Research</h2>
-
-      <!-- Remove this sub-heading if you prefer not to label a job market paper yet. -->
-      <h3>Job market paper</h3>
-
-      <div class="paper">
-        <p class="paper-title">The Effective Reach of Collective Bargaining: Pass-Through, Wage Cushions, and Spillovers in Germany</p>
-        <details>
-          <summary>Abstract</summary>
-          <p>How far do sectoral wage settlements reach beyond the workers they nominally cover, and where along the wage distribution do they bite? I link agreement-level data on negotiated wages to German linked employer-employee data and the IAB Establishment Panel to measure establishment-level exposure to sectoral settlements. Using a shift-share design with exposure-robust inference, I estimate the pass-through of negotiated wage increases to actual wages, the response of the wage cushion, and spillovers to establishments not bound by an agreement. The estimates inform tools that forecast wage growth from collective agreements, which observe only the covered segment of the labor market.</p>
-        </details>
-        <p class="paper-meta">Draft available upon request.</p>
-      </div>
 
       <h3>Working papers</h3>
 
@@ -133,8 +122,9 @@
         <p class="paper-meta">with <a href="https://raffaelkind.com/">Raffael Kind</a> and <a href="https://robertschall.eu/">Robert Schall</a></p>
         <details>
           <summary>Abstract</summary>
-          <p>We study how a large negative labor-demand shock propagates through local labor markets when the destruction is directed by government rather than the market. Between 1990 and 1994 the Treuhandanstalt liquidated, privatized or restituted more than 10,000 East German state-owned firms. Combining firm-level Treuhand records with administrative worker biographies, we measure each county's exposure to liquidations and address non-random exposure with a recentered instrument. Workers in more exposed counties earn more over the following decade. The evidence points to creative destruction: faster reallocation into services and the entry of higher-paying establishments. More exposed counties also record persistently lower far-right vote shares.</p>
+          <p>A large literature documents that negative labor-demand shocks scar affected communities through persistent job loss, earnings declines, and political radicalization. Yet a theoretical tradition going back to Schumpeter's notion of creative destruction predicts that the closure of unproductive firms can also free resources for more productive uses. Whether the cleansing or scarring force dominates in any given episode plausibly depends on what set off the destruction. Existing studies have largely confirmed the scarring hypothesis for market-driven shocks – where demand or technology <em>forces</em> firms to exit – but the policy-relevant case of a government <em>choosing</em> to let firms fail remains almost entirely unaddressed. We study one such setting. After reunification, the German <em>Treuhandanstalt</em> liquidated thousands of state-owned East German firms as part of the transition from a planned to a market economy. Combining firm-level data on 6,608 Treuhand firms with administrative records for 251,812 workers from September 1989 onward, we find that a one-standard-deviation increase in a county's exposure to Treuhand liquidations raises labor earnings by 2.7 log points. These effects are not driven by selection through unemployment or migration. We attribute this premium to faster reallocation of workers from declining to expanding sectors, and higher rates of new firm establishments which provide higher average pay. Further, high-exposure counties register persistently lower support for far-right parties across three decades of federal elections. Our results provide a clean existence proof that creative destruction can dominate scarring, and suggest that the adverse consequences associated with labor-demand shocks reflect not destruction per se but the failure to reallocate.</p>
         </details>
+        <p class="paper-pres">Presented at (* by coauthor): EEA-ESEM Congress 2026 (Dublin)*; Spatial Inequality Conference by FRB Atlanta and Stone Center at the University of Chicago 2026 (Atlanta)*; 6th ECB Mini-Workshop on Household Economics*; IAAE Annual Conference 2026 (Lisbon); 2nd Berlin PhD Conference in Economics 2026 (Berlin); Labor Market &amp; Political Polarization: The Impact of AI and Globalization 2026 (Amsterdam); 16th ifo Dresden Workshop on Regional Economics 2026 (Dresden)*; Florence Political Economy Applied Research Lab 2026 (Florence)*; European Causal Inference Meeting 2025 (Ghent)*</p>
         <p class="paper-meta">Draft available upon request.</p>
       </div>
 
@@ -143,12 +133,21 @@
         <p class="paper-meta">with Simon Handreke and <a href="https://raffaelkind.com/">Raffael Kind</a></p>
         <details>
           <summary>Abstract</summary>
-          <p>Equal-opportunity policy targets access to higher education and elite occupations. Using Swedish linked employer-employee data, we show that sizeable earnings gaps by class origin remain among workers within the same elite occupations, also conditional on cognitive and non-cognitive skills. An AKM decomposition with firm-by-origin effects attributes about one third of the gap to sorting across employers and two thirds to differential earnings growth within firms. Gaps are close to zero at career entry and open up over the first ten to fifteen years, which shifts the relevant policy margin from access to early-career pay-setting and promotion.</p>
+          <p>Sorting into careers—occupations and the educational pathways leading to them—is known to account for much of intergenerational earnings persistence. Yet in Swedish cohorts born 1960–1978, we document that about a fifth of the aggregate parent–child earnings association survives conditioning on narrowly defined career entry cells (sex, education level and institution, and occupation at career start), and the residual is concentrated above the 80th percentile of parental earnings. This is driven by what we call the “class pay gap within careers”: within the same career, children with higher combined parental earnings increasingly out-earn their peers as careers progress, and the gradient steepens toward the top—bottom-quintile children earn about 7% less than top-quintile peers at age 40 (0.25 within-cell standard deviations). The gap appears in graduate and non-graduate careers alike, but is muted where the public sector dominates. Dimensions of class beyond parental earnings—education, wealth, and occupation-derived social class—further stratify earnings within careers, with children from working-class households in the bottom earnings quintile facing the largest gaps. Firm and geographical sorting and non-cognitive skills together account for about 40% of the gap. We show that the remainder largely reflects differential earnings growth within firms rather than higher switching rates or larger gains at switches (net of firm effects), pointing to differences in progression and promotion inside firms.</p>
         </details>
+        <p class="paper-pres">Presented at (* by coauthor): NASMES 2026 (Atlanta)*; 3rd Workshop on Wealth Inequality, Economic Mobility and Labor Markets 2026 (Vienna)*; 9th Linked Employer-Employee Data Workshop 2026 (Lisbon); Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome); 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; European Causal Inference Meeting 2025 (Ghent); 3rd Essex PhD Conference in Applied Economics 2025 (Colchester)*; EUI Microeconometrics Working Group 2024 (Florence)*</p>
         <p class="paper-meta">Draft available upon request.</p>
       </div>
 
       <h3>Work in progress</h3>
+
+      <div class="paper">
+        <p class="paper-title">The Effective Reach of Collective Bargaining: Pass-Through, Wage Cushions, and Spillovers in Germany</p>
+        <details>
+          <summary>Abstract</summary>
+          <p>How far do sectoral wage settlements reach beyond the workers they nominally cover, and where along the wage distribution do they bite? I link agreement-level data on negotiated wages to German linked employer-employee data and the IAB Establishment Panel to measure establishment-level exposure to sectoral settlements. Using a shift-share design with exposure-robust inference, I estimate the pass-through of negotiated wage increases to actual wages, the response of the wage cushion, and spillovers to establishments not bound by an agreement. The estimates inform tools that forecast wage growth from collective agreements, which observe only the covered segment of the labor market.</p>
+        </details>
+      </div>
 
       <div class="paper">
         <p class="paper-title">Occupational Choice and Skilled Worker Shortages</p>
