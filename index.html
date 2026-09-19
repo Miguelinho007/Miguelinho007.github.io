@@ -42,15 +42,18 @@
   a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
 
   /* Header */
-  .masthead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; }
+  .masthead { display: grid; grid-template-columns: 1fr 15rem; column-gap: 2.5rem; row-gap: 0.9rem; align-items: center; }
   .masthead h1 { margin: 0; font-size: 2.1rem; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; }
-  .masthead nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; font-size: 1rem; }
+  .masthead nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; font-size: 1rem; }
   .masthead nav a { text-decoration: none; }
   .masthead nav a:hover { text-decoration: underline; }
-  .ident { display: flex; align-items: center; gap: 1.25rem; }
-  .logo { display: block; flex: none; line-height: 0; }
-  .logo img { height: 3.4rem; width: auto; display: block; }
-  @media (max-width: 36rem) { .logo img { height: 2.6rem; } .ident { gap: 0.9rem; } }
+  /* Logo sits in the same 15rem column as the portrait below, so their edges line up. */
+  .logo { display: block; line-height: 0; }
+  .logo img { width: 100%; height: auto; display: block; }
+  @media (max-width: 36rem) {
+    .masthead { grid-template-columns: 1fr; }
+    .logo { order: -1; max-width: 9rem; }
+  }
   .role { margin: 0.35rem 0 0; color: var(--muted); }
 
   /* Intro */
@@ -93,14 +96,12 @@
 <div class="page">
 
   <header class="masthead">
-    <div class="ident">
-      <!-- Save the EUI logo as eui.png next to this file. Until it is there, the logo is simply hidden. -->
-      <a class="logo" href="https://www.eui.eu/en/academic-units/department-of-economics"><img src="eui.png" alt="European University Institute" onerror="this.parentNode.style.display='none'"></a>
-      <div>
-        <h1>David Wittekopf</h1>
-        <p class="role">PhD candidate in Economics, European University Institute</p>
-      </div>
+    <div>
+      <h1>David Wittekopf</h1>
+      <p class="role">PhD candidate in Economics, European University Institute</p>
     </div>
+    <!-- Save the EUI logo as eui.png next to this file. Until it is there, the logo is simply hidden. -->
+    <a class="logo" href="https://www.eui.eu/en/academic-units/department-of-economics"><img src="eui.png" alt="European University Institute" onerror="this.parentNode.style.display='none'"></a>
     <nav aria-label="Sections">
       <a href="#working-papers">Working papers</a>
       <a href="#work-in-progress">Work in progress</a>
