@@ -47,6 +47,10 @@
   .masthead nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; font-size: 1rem; }
   .masthead nav a { text-decoration: none; }
   .masthead nav a:hover { text-decoration: underline; }
+  .ident { display: flex; align-items: center; gap: 1.25rem; }
+  .logo { display: block; flex: none; line-height: 0; }
+  .logo img { height: 3.4rem; width: auto; display: block; }
+  @media (max-width: 36rem) { .logo img { height: 2.6rem; } .ident { gap: 0.9rem; } }
   .role { margin: 0.35rem 0 0; color: var(--muted); }
 
   /* Intro */
@@ -89,9 +93,13 @@
 <div class="page">
 
   <header class="masthead">
-    <div>
-      <h1>David Wittekopf</h1>
-      <p class="role">PhD candidate in Economics, European University Institute</p>
+    <div class="ident">
+      <!-- Save the EUI logo as eui.png next to this file. Until it is there, the logo is simply hidden. -->
+      <a class="logo" href="https://www.eui.eu/en/academic-units/department-of-economics"><img src="eui.png" alt="European University Institute" onerror="this.parentNode.style.display='none'"></a>
+      <div>
+        <h1>David Wittekopf</h1>
+        <p class="role">PhD candidate in Economics, European University Institute</p>
+      </div>
     </div>
     <nav aria-label="Sections">
       <a href="#working-papers">Working papers</a>
@@ -107,7 +115,6 @@
       <div>
         <p>I am a PhD candidate in Economics at the <a href="https://www.eui.eu/en/academic-units/department-of-economics">European University Institute</a> in Florence, supervised by <a href="https://sites.google.com/site/coopereconomics/">Russell Cooper</a> and <a href="https://sites.google.com/unifi.it/fabriziamealli">Fabrizia Mealli</a>. I am a labor economist. My research studies how wage-setting institutions and large structural shocks shape wages, employment and inequality.</p>
         <p>In my research I use administrative microdata from Germany and Sweden, covering both workers and firms: social security records, linked employer-employee data and firm registers. I combine these with survey data and with agreement-level data on negotiated wages.</p>
-        <p>Methodologically, I use reduced-form designs, including AKM wage decompositions, shift-share instruments and event studies, and turn to structural models when the policy question calls for counterfactuals.</p>
         <p>I am currently visiting the Macroeconomic Analysis and Projections Division of the Deutsche Bundesbank. Before the PhD I spent two years in the Prices and Costs Division of the European Central Bank, where I helped build the ECB wage tracker and contributed to the Eurosystem's Price-setting Microdata Analysis Network (PRISMA). In fall 2025 I was a visiting PhD student at New York University, hosted by Christopher Flinn.</p>
       </div>
       <!-- Save your portrait as photo.jpg next to this file (roughly 600 x 750 px is plenty). -->
